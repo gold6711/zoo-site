@@ -141,10 +141,34 @@ ul {
     text-decoration: underline; }
 
 .photo-1 {
+  min-width: 1920px;
+  width: 100%;
+  overflow: hidden;
   position: relative;
-  margin-top: -22px;
-  margin-left: -16px;
+  top: -22px;
+  left: -16px;
   z-index: 1; }
+
+.slogan {
+  position: absolute;
+  font-family: Days, sans-serif;
+  font-size: 60px;
+  font-weight: 400;
+  letter-spacing: 2px;
+  color: #fff;
+  top: 464px;
+  left: 402px; }
+
+.slogan-description {
+  position: relative;
+  display: block;
+  width: 705px;
+  font-family: Cuprum, sans-serif;
+  font-size: 24px;
+  line-height: 1.3;
+  color: #fff;
+  top: -247px;
+  left: 402px; }
 
 .content {
   margin: 0 auto;
@@ -156,3 +180,7 @@ ul {
   content: "";
   display: block;
   clear: both; }
+
+.rasporka {
+  width: 100%;
+  height: 100px; }
