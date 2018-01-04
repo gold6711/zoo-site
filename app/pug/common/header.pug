@@ -1,0 +1,32 @@
+header
+    a.logo(href="/")
+        img(src="img/logo.png" style="width: 140px; height: 140px;" alt="")
+    .top-line.clearfix
+        .top-social
+            .join Присоединяйтесь к нам:
+            a.soc-icon(href="javascript:void(0);")
+                img(src="img/vk.png" style="width: 40px; height: 40px;")
+            a.soc-icon(href="javascript:void(0);")
+                img(src="img/fb.png" style="width: 40px; height: 40px;")
+            a.soc-icon(href="javascript:void(0);")
+                img(src="img/in.png" style="width: 40px; height: 40px;")
+            a.soc-icon(href="javascript:void(0);")
+                img(src="img/you-t.png" style="width: 40px; height: 40px;")
+        .top-info
+            .title Лобня, ТРЦ «Поворот»
+            .address Краснополянский проезд, 2, 1-й этаж напротив «Макдональдс»
+            .time
+                | Ежедневно с 10:00 до 20:00 без перерыва.
+                a.map-link(href="javascript:void(0);")  Схема проезда
+        .top-tel
+            .tel +7 498 672-81-34
+            .order-before Предварительный заказ билетов
+            a.email(href="mailto:zakaz@ecozoopark.ru") zakaz@ecozoopark.ru
+block menu
+    mixin list(...items)
+        .top-menu-line.wrapper-all
+            ul.top-menu
+                each item in items
+                    li.menu-item
+                        a.object-list__link(href="javascript:void(0);")= item
+    +list('О зоопарке','Животные','Мероприятия','Цены на билеты','Фото и видео','Отзвы','Правила посещения','Новости','Контакты','Вакансии')

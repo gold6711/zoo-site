@@ -1,69 +1,63 @@
-doctype html
-html(lang="ru")
-    head
-        meta(charset="UTF-8")
-        // meta http-equiv="content-type" content="text/html; charset=utf-8"
-        title Zoo
-        link(rel="stylesheet" href="css/libs.min.css" type="text/css")
-        link(rel="stylesheet" href="css/main.css" type="text/css")
-        link(rel="stylesheet" href="css/normalize.css" type="text/css")
-        link(href="https://fonts.googleapis.com/css?family=Cuprum" rel="stylesheet" type="text/css")
-        link(href="http://allfont.ru/allfont.css?fonts=days" rel="stylesheet" type="text/css")
-    body
-        .wrapper-all
-            .top-content
-                header
-                    a.logo(href="/")
-                        img(src="img/logo.png" style="width: 140px; height: 140px;" alt="")
-                    .top-line.clearfix
-                        .top-social
-                            .join Присоединяйтесь к нам:
-                            a.soc-icon(href="#")
-                                img(src="img/vk.png" style="width: 40px; height: 40px;")
-                            a.soc-icon(href="#")
-                                img(src="img/fb.png" style="width: 40px; height: 40px;")
-                            a.soc-icon(href="#")
-                                img(src="img/in.png" style="width: 40px; height: 40px;")
-                            a.soc-icon(href="#")
-                                img(src="img/you-t.png" style="width: 40px; height: 40px;")
-                        .top-info
-                            .title Лобня, ТРЦ «Поворот»
-                            .address Краснополянский проезд, 2, 1-й этаж напротив «Макдональдс»
-                            .time
-                                | Ежедневно с 10:00 до 20:00 без перерыва.
-                                a.map-link(href="#")  Схема проезда
-                        .top-tel
-                            .tel +7 498 672-81-34
-                            .order-before Предварительный заказ билетов
-                            a.email(href="mailto:zakaz@ecozoopark.ru") zakaz@ecozoopark.ru
-                block menu
-                    mixin list(...items)
-                        .top-menu-line.wrapper-all
-                            ul.top-menu
-                                each item in items
-                                    li.menu-item
-                                        a.object-list__link(href="#")= item
-                    +list('О зоопарке','Животные','Мероприятия','Цены на билеты','Фото и видео','Отзвы','Правила посещения','Новости','Контакты','Вакансии')
+extends layout/layout
+
+block content
             .photo-1
                 img(src="img/photo-1.png" style="width: 100%;" alt="")
-                h2.slogan
+                p.slogan
                     | ЛЮБИТЬ
-                span.slogan-description
-                    | В контактном зоопарке вас ждут пушистые кролики, забавные шиншилы
-                    | и яркие попугайчики. Еноты будут спать на руках ваших детей, а хорьки
-                    | поиграют с ними в прятки. Здесь не придется тянуться через решетку
-                    | к питомцам, а можно свободно и в свое удовольствие кормить их, гладить,
-                    | трогать и фотографировать !
-
-
-
-
+                    span.slogan-description
+                        | В контактном зоопарке вас ждут пушистые кролики, забавные шиншилы
+                        | и яркие попугайчики. Еноты будут спать на руках ваших детей, а хорьки
+                        | поиграют с ними в прятки. Здесь не придется тянуться через решетку#[br]
+                        | к питомцам, а можно свободно и в свое удовольствие кормить их, гладить,
+                        | трогать и фотографировать !
+            .picture-cutter
             .content
-                p Если вы разработчик со стажем, то наверняка слышали про SASS технологию. SASS – это язык проектирования CSS файла, упрощающий процесс написания CSS кода и предоставляющий расширенный инструментарий в виде переменных, логических операций и т.п. Сейчас я расскажу, как это дело настроить на локальной машине.
-                p Ничего сложного в установке, казалось бы, и нет, но меня угораздило потратить порядка полутора часов, чтобы настроить связку SASS и PhpStorm. Дабы не наступать на эти грабли дважды – законспектирую. Еще скажу, что мне больше по вкусу пришелся язык разметки SCSS, нежели SASS – разница в обертывании данных фигурными скобками
+                .first-article
+                    .topic.about
+                        | Контактный эко
+                        | зоопарк в Лобне,
+                        | ТРЦ «Поворот»
+                .palm-picture
+                    img(src="img/palm.png" style="width: 174px; height: 174px;").palm
+                .text.about-text
+                    | Контактный зоопарк в Москве - это удивительное место, где взрослые#[br]
+                    | и дети могут общаться с животными, учиться любить их и заботиться.#[br]
+                    | Наших питомцев можно гладить, кормить и брать на ручки. Все животные
+                    | имеют прививки и ветеринарные паспорта, у нас чисто и уютно,#[br]
+                    | а заботливые сотрудники проведут увлекательную экскурсию#[br]
+                    | и расскажут вам удивительные истории про наших постояльцев.#[br]
+                    | Добро пожаловать в наш частный мини зоопарк !
+                .about-background
+                    .blue-turtle
+                    .grey-turtle
+                    .rose-turtle
+                img(src="img/turtle.png" style="width: 530px; height: 398px;").turtle
+                a(href="javascript:void(0);").btn.btn-about
+                    | О зоопарке
 
+                img(src="img/pig.png" style="width: 530px; height: 419px;").pig
+                .activity-background
+                    .blue-pig
+                    .grey-pig
+                    .rose-pig
+                .second-article
+                    .topic.activity
+                        | Театрализованные
+                        | представления, Детские
+                        | дискотеки, мастер-классы
 
+                    .text.activity-text
+                        | Аквагрим для детей – уникальная возможность перевоплотится#[br]
+                        | в сказочного героя, в считанные минуты преобразившись в принцессу,#[br]
+                        | фею, бабочку, пирата, тигра, кота, человека-паука, бэтмена или любого#[br]
+                        | другого любимого героя. Аквагрим – это настоящее маленькое чудо,#[br]
+                        | волшебство. Самое интересное, что деткам нравится не только конечный#[br]
+                        | результат, но и сам процесс преображения, за которым они наблюдают#[br]
+                        | с широко открытыми глазами.
 
+                a(href="javascript:void(0);").btn.btn-activity
+                    | Мероприятия
 
 
             .rasporka
